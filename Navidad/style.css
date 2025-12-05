@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+     background-color: color-mix(in srgb, #fd0606 35%, #fff 50%);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+section img {
+    max-width: 30%;
+    height: auto;
+    background: none;
+    text-align: start;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+@keyframes mover-imagen {
+  0% {
+    transform: translateX(0px) scale(1); /* Posición y tamaño inicial */
+  }
+  100% {
+    transform: translateX(50px) scale(1.2); /* Se mueve 50px a la derecha y escala un 20% */
+  }
+}
+
+section img {
+  animation-name: mover-imagen; /* Nombre de la animación */
+  animation-duration: 3s;      /* Duración de un ciclo */
+  animation-iteration-count: infinite; /* Repetir indefinidamente */
+  animation-direction: alternate; /* Alterna dirección */
+  animation-timing-function: ease-in-out; /* Curva de velocidad */
+}
+
